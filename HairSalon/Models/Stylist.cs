@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System;
 
-namespace Stylist.Models
+namespace HairSalon.Models
 {
   public class Stylist
   {

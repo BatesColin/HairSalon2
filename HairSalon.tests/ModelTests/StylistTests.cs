@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System;
 using HairSalon.Models;
@@ -17,7 +17,7 @@ namespace HairSalon.Tests
    public void Save_Test()
    {
      //Arrange
-     Stylist testStylist = new Stylist("Jain");
+     Stylist testStylist = new Stylist("Sally");
      testStylist.Save();
      //Act
      List<Stylist> testList = new List<Stylist>{testStylist};

@@ -1,12 +1,20 @@
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace HairSalon
 {
-public class HairSalon
-{
-public bool ExampleTest(int year)
-  {
-    // logic will go here
-    return false;
-  }
-}
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
+        }
+    }
 }
